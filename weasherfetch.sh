@@ -40,8 +40,8 @@ pad_string() {
 
 #api requests
 
-api_key="a6c3cfde026d31b995612c6f169203a7"
-ipinfo_key="bd1acc5f04e870"
+api_key="3f693f47db9122f2f0c282f212fe0901"
+ipinfo_key="1fb09fd3032512"
 user_ip=$(curl -s https://ifconfig.me/ip)
 
 location_info=$(curl -s "https://ipinfo.io/$user_ip?token=$ipinfo_key")
@@ -65,7 +65,7 @@ fi
 #cli output
 
 echo ""
-echo -e "\t\e[37mHere is the current weather report for \e[32m$city\e[37m uwu~\e[0m"
+echo -e "\t\e[37mHere is the current weather report for \e[32m$city\e[37m\e[0m"
 echo
 echo -e "\e[32m$(printf '%*s\n' "${COLUMNS:-$(stty size 2>/dev/null | cut -d' ' -f2)}" '' | tr ' ' =)\e[0m"
 echo -e "\e[32m\t$(pad_string "current" 40) forecast"
@@ -97,7 +97,7 @@ fi
 
 wind_speed_rounded=$(echo "$wind_speed" | awk '{ print int($1) }')
 if [ "$wind_speed_rounded" -gt 8 ] ; then
-    echo -e "\t\e[36mThe wind is strong, be careful.\e[0m"
+    echo -e "\t\e[36mThe wind is strong,be careful.\e[0m"
 fi    
 
 if [ "$(date +"%d/%m")" == "31/12" ]; then
