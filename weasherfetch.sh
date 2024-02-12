@@ -84,13 +84,13 @@ if [[ "$weather_desc" == "clear sky" ]]; then
 elif [[ "$weather_desc" == *"clouds"* ]]; then
     echo -e "\t\e[34mA cloudy day is expected today\e[0m"
 elif [[ "$weather_desc" == *"rain"* || "$weather_desc" == *"drizzle"* ]]; then
-    echo -e "\t\e[36mIt's raining today\e[0m"
+    echo -e "\t\e[36mIt is raining outside\e[0m"
 elif [[ "$weather_desc" == *"thunderstorm"* ]]; then
     echo -e "\t\e[31mA thunderstorm is to be expected today\e[0m"
 elif [[ "$weather_desc" == *"snow"* ]]; then
-    echo -e "\t\e[37mIt is going to be snowing today!\e[0m"
+    echo -e "\t\e[37mSnow is expected today!\e[0m"
 elif [[ "$weather_desc" == "fog" || "$weather_desc" == "mist" ]]; then
-    echo -e "\t\e[31mA fog is expected\e[0m"
+    echo -e "\t\e[31mA fog is expected today\e[0m"
 elif [[ "$weather_desc" == "smoke" || "$weather_desc" == "haze" ]]; then
     echo -e "\t\e[31mA smoke is expected to be present outside\e[0m"
 fi
